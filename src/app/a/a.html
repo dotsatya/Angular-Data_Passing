@@ -1,0 +1,46 @@
+<!-- ==================== A COMPONENT ==================== -->
+<br />
+-------------- A COMPONENT --------------
+<br />
+<p>a works!</p>
+
+<!-- Display name -->
+name in a component: {{ name }}
+
+<br />
+<br />
+
+<!-- ==================== B COMPONENT ==================== -->
+<br />
+-------------- B COMPONENT --------------
+<br />
+
+<app-b [name]="name" city="pune"></app-b>
+
+<br />
+
+<!-- Select User -->
+<select #selectedUser (change)="onUserChange(selectedUser.value)" name="" id="">
+  <option value="Sam">Sam</option>
+  <option value="Saya">Saya</option>
+</select>
+
+<br />
+<br />
+
+<!-- ==================== C COMPONENT ==================== -->
+<br />
+-------------- C COMPONENT --------------
+<br />
+
+<!-- Pass users array to C component -->
+<app-c [users]="users"></app-c>
+
+<!-- -------------- ARRAY OF USERS -------------- -->
+<!-- Pass each user separately -->
+
+<!--
+<div *ngFor="let user of users">
+  <app-d [name]="user.name" [city]="user.city"></app-d>
+</div>
+-->
